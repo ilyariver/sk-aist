@@ -1,0 +1,19 @@
+.built-houses-section {
+  padding-bottom: 110px;
+
+  &__title {
+    margin-bottom: 60px;
+    font-size: 48px;
+    font-weight: 800;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__more-btn {
+    display: flex;
+    justify-content: center;
+  }
+}

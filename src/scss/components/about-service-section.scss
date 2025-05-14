@@ -1,0 +1,30 @@
+.about-service-section {
+  padding-bottom: 110px;
+
+  &__container {
+  }
+
+  &__content {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: 800;
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 1.3;
+    @include notLast() {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__promos-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}

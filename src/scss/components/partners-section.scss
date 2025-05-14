@@ -1,0 +1,38 @@
+.partners-section {
+  padding-bottom: 110px;
+
+  &__title {
+    margin-bottom: 44px;
+    font-weight: 800;
+    font-size: 48px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    width: calc(100% / 4 - 30px);
+    opacity: 0.3;
+    transition: opacity $transition;
+
+    @include anyHover {
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    width: 60%;
+    object-fit: cover;
+
+    &.domrf {
+      width: 50px;
+    }
+  }
+}

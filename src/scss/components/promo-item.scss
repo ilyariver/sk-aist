@@ -1,0 +1,63 @@
+.promo-item {
+  position: relative;
+  width: calc(100% / 2 - 16px);
+  background-color: var(--bgcolor-blue-light);
+
+  @include pseudocell(before) {
+    content: "Акция";
+    top: 0;
+    left: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 48px;
+    background-color: var(--bgcolor-red);
+    padding: 0 30px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    transform: translateY(-50%);
+  }
+
+  &__wrapper {
+    padding: 46px 43px 0;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 800;
+  }
+
+  &__description {
+    margin-bottom: 32px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  &__small-title {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__list, &__item {
+    list-style: disc;
+  }
+
+  &__list {
+    margin-bottom: 34px;
+    line-height: 1.2;
+  }
+
+  &__item {
+    @include notLast {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__prev {
+    height: 285px;
+  }
+}

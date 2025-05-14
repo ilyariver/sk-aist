@@ -1,0 +1,20 @@
+.select-project-section {
+  padding-bottom: 110px;
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: 800;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+  }
+}

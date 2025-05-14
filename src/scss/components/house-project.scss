@@ -1,0 +1,35 @@
+.house-project {
+  width: calc(100% / 3 - 15px);
+
+  &__link {
+    @include anyHover {
+      .btn.btn-blue {
+        background: transparent;
+        color: #346290;
+      }
+    }
+  }
+
+  &__image {
+    min-height: 263px;
+  }
+
+  &__content {
+    padding: 24px 20px 20px;
+    background-color: var(--bgcolor-blue-light);
+  }
+
+  &__name {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  &__cost {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: 800;
+  }
+}

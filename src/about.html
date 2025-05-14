@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', { 'title': 'О нас | СК АИСТ' })
+<body>
+<div class="wrapper">
+  @@include('html/header.html', {page: 'about'})
+
+  <main class="page">
+    <div data-observ></div>
+    @@include('html/components/about-company.html')
+<!--    @@include('html/components/office-images.html')-->
+    @@include('html/components/how-to-get.html')
+    @@include('html/components/partners.html')
+    @@include('html/components/why-we.html')
+    @@include('html/components/answers.html')
+    @@include('html/components/feedback.html')
+    @@include('html/components/clients-comments.html')
+    @@include('html/components/documents.html')
+  </main>
+
+  @@include('html/footer.html')
+</div>
+
+@@include('html/popupExample.html')
+@@include('html/script.html')
+</body>
+</html>

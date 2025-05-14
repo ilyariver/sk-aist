@@ -1,0 +1,29 @@
+.employees-section-section {
+  padding-top: 23px;
+  padding-bottom: 110px;
+
+  &__breadcrumbs {
+    margin-bottom: 23px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-weight: 800;
+    font-size: 48px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    width: calc(100% / 4 - 25px);
+
+    &:last-child {
+      margin-right: auto;
+    }
+  }
+}

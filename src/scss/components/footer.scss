@@ -1,0 +1,190 @@
+.footer {
+	padding: 77px 0;
+	background: url('../images/footer-bg.png') center no-repeat;
+	background-size: cover;
+
+	@include mediaMx(1199) {
+		padding: 48px 0;
+	}
+
+	@include mediaMx(767) {
+		padding: 30px 0 60px;
+	}
+}
+
+.f_top {
+	padding-bottom: 32px;
+	border-bottom: 1px solid rgba(255, 255, 255, .1);
+	margin-bottom: 32px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 30px;
+
+	@include mediaMx(1199) {
+		grid-template-columns: repeat(3, 1fr) 30%;
+		grid-gap: 24px;
+	}
+
+	@include mediaMx(991) {
+		grid-gap: 16px;
+	}
+
+	@include mediaMx(767) {
+		grid-template-columns: 1fr;
+		grid-gap: 30px;
+		margin-bottom: 15px;
+	}
+
+}
+
+.ft_box {
+	/*width: 25%;*/
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+
+	@include mediaMx(767) {
+
+		&:nth-child(1) {
+			order: 2;
+		}
+
+		&:nth-child(2) {
+			order: 3;
+		}
+
+		&:nth-child(3) {
+			order: 4;
+		}
+
+		&:nth-child(4) {
+			order: 1;
+		}
+	}
+}
+
+.ftb_header {
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+
+		li {
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 19.12px;
+
+			a, span {
+				color: #fff;
+			}
+
+			span {
+
+			}
+		}
+	}
+
+}
+
+.ftb_body {
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		li {
+			font-size: 14px;
+			line-height: 16.8px;
+			a, span {
+				color: #fff;
+			}
+		}
+	}
+
+}
+
+.ftbb_row {
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 21px;
+	color: #fff;
+
+	&:nth-child(1), &:nth-child(2) {
+		margin-top: 4px;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 30px;
+
+		a {
+			/*color: #fff; */
+		}
+	}
+
+	a {
+		color: #fff;
+	}
+
+	&:last-child {
+		margin: 16px 0 0;
+		display: flex;
+		align-items: center;
+		gap: 16px;
+
+		@include mediaMx(991) {
+			flex-wrap: wrap;
+		}
+
+		a {
+			display: block;
+
+			&.btn {
+				width: 100%;
+				margin-bottom: 8px;
+
+				@include mediaMx(767) {
+					width: auto;
+					margin-bottom: 0;
+					padding: 13px 18px;
+				}
+
+			}
+
+			img {
+				width: 32px;
+			}
+
+		}
+	}
+
+	&:last-child a:nth-child(1):hover {
+		text-decoration: none;
+	}
+
+}
+
+.f_bottom {
+	display: flex;
+	gap: 87px;
+
+	@include mediaMx(767) {
+		flex-direction: column;
+		gap: 30px;
+	}
+
+}
+.fb_box {
+	width: 116px;
+
+	&, & a {
+		color: rgba(255, 255, 255, .5);
+		font-size: 12px;
+		line-height: 16.39px;
+	}
+
+	&:last-child {
+		width: 155px;
+	}
+
+}

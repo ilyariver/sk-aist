@@ -1,0 +1,14 @@
+.documents-download-card {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bgcolor-blue-light);
+  min-height: 490px;
+
+  &__img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: radial-gradient(circle,rgba(255, 224, 224, 1) 0%, rgba(224, 74, 74, 0) 30%);
+  }
+}

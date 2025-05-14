@@ -1,0 +1,28 @@
+.built-house-block {
+  width: calc(100% / 2 - 15px);
+
+  &__link {
+    @include anyHover {
+      .built-house-block__content {
+        background-color: var(--bgcolor-red);
+      }
+    }
+  }
+
+  &__image {
+    height: 354px;
+  }
+
+  &__content {
+    margin-bottom: 40px;
+    padding: 20px 30px 50px;
+    background-color: var(--bgcolor-blue-deep);
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+}

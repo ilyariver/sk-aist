@@ -1,0 +1,27 @@
+.breadcrumbs {
+  display: flex;
+
+  &--dark {
+    .breadcrumbs__link {
+      color: #000000;
+    }
+  }
+
+  &__link {
+    position: relative;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+
+    @include notLast {
+      margin-right: 20px;
+      text-decoration: underline;
+
+      @include pseudocell(after) {
+        content: ">";
+        top: 0;
+        right: -25%;
+      }
+    }
+  }
+}

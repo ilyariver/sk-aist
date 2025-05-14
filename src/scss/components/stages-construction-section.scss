@@ -1,0 +1,47 @@
+.stages-construction-section {
+  padding-bottom: 110px;
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: 800;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 340px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 34px;
+    width: calc(100% / 2 - 15px);
+  }
+
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 26px;
+    min-width: 74px;
+    min-height: 74px;
+    background-color: var(--bgcolor-blue-lighten);
+    color: var(--bgcolor-blue-deep);
+    font-size: 52px;
+  }
+
+  &__item-title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  &__item-text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+}

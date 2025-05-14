@@ -1,0 +1,30 @@
+.office-images-section {
+  padding-bottom: 110px;
+
+  &__title {
+    margin-bottom: 44px;
+    font-weight: 800;
+    font-size: 48px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 3 - 20px);
+    height: 251px;
+    background-color: #A9A9A9;
+
+    span {
+      color: #fff;
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
+}

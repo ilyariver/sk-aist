@@ -1,0 +1,25 @@
+.advantages-slide {
+  padding: 25px 40px;
+  background-color: var(--bgcolor-blue-light);
+
+  &__img-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 30px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}

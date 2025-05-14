@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', { 'title': 'Услуги | СК АИСТ' })
+<body>
+<div class="wrapper">
+  @@include('html/header.html', {page: 'services'})
+
+  <main class="page">
+    <div data-observ></div>
+    @@include('html/components/services-list.html')
+    @@include('html/components/feedback.html')
+    @@include('html/components/clients-comments.html')
+  </main>
+
+  @@include('html/footer.html')
+</div>
+
+@@include('html/popupExample.html')
+@@include('html/script.html')
+</body>
+</html>

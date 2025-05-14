@@ -1,0 +1,37 @@
+.employee-card {
+  &__img {
+    width: 100%;
+    min-height: 358px;
+
+    &--empty {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #A9A9A9;
+    }
+  }
+
+  &__empty-text {
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  &__info {
+    padding: 15px 18px;
+    height: 100px;
+    background-color: var(--bgcolor-blue-light);
+  }
+
+  &__name {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  &__post {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+}

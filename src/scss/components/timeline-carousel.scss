@@ -1,0 +1,142 @@
+.timeline-carousel {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+
+  @include pseudocell(after) {
+    bottom: 0;
+    background: #ffffff;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(237, 221, 83, 0) 100%);
+    width: 100%;
+    height: 450px;
+    z-index: 2;
+  }
+
+  &__stop-scroll {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__instruction {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    background-image: linear-gradient(90deg, rgba(40, 70, 100, 0.4) 68.13%, rgba(40, 70, 100, 0) 94.42%);
+    opacity: 1;
+    z-index: 1;
+    transition: opacity $transition;
+
+    &-text {
+      margin-bottom: 30px;
+      padding-top: 250px;
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 1.2;
+      color: #fff;
+    }
+
+    span {
+      padding-left: 40px;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: -340px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+
+    &.active {
+      .timeline-carousel__img {
+        width: 100%;
+      }
+
+      .timeline-carousel__text {
+        font-size: 18px;
+      }
+
+      .timeline-carousel__year-number {
+        font-size: 75px;
+      }
+
+      .timeline-carousel__figure {
+        min-width: 36px;
+        min-height: 36px;
+        background-color: var(--bgcolor-blue-deep);
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__img-wrap {
+    display: flex;
+    align-items: center;
+    width: 45%;
+  }
+  
+  &__img {
+    width: 350px;
+    height: 205px;
+    object-fit: cover;
+    transition: width $transition300;
+  }
+
+  &__year {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    text-align: center;
+  }
+
+  &__year-number {
+    margin-bottom: 15px;
+    font-size: 50px;
+    transition: font-size $transition300;
+  }
+
+  &__figure {
+    position: relative;
+    min-width: 20px;
+    min-height: 20px;
+    border: 2px solid var(--bgcolor-blue-deep);
+    transition: all $transition300;
+
+    @include pseudocell(after) {
+      top: 18px;
+      left: 50%;
+      width: 2px;
+      height: 86px;
+      background-color: var(--bgcolor-blue-deep);
+      transform: translateX(-50%);
+    }
+  }
+
+  &__text {
+    width: 33%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.3;
+    transition: font-size $transition300;
+  }
+}
