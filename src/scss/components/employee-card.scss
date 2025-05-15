@@ -2,6 +2,7 @@
   &__img {
     width: 100%;
     min-height: 358px;
+    object-fit: cover;
 
     &--empty {
       display: flex;
@@ -9,29 +10,46 @@
       align-items: center;
       background-color: #A9A9A9;
     }
+
+    @include adaptiveClamp(min-height, 358, 195, 890, 320);
   }
 
   &__empty-text {
     font-weight: 500;
     font-size: 18px;
     color: #fff;
+    @include adaptiveClamp(font-size, 18, 14, 890, 320);
   }
 
   &__info {
     padding: 15px 18px;
     height: 100px;
     background-color: var(--bgcolor-blue-light);
+
+    @include mediaMx(1080) {
+      min-height: 150px;
+    }
+
+    @include mediaMx(800) {
+      padding: 12px 13px;
+      min-height: 119px;
+    }
   }
 
   &__name {
     margin-bottom: 8px;
     font-weight: 600;
     font-size: 20px;
+    @include adaptiveClamp(font-size, 20, 18, 890, 320);
   }
 
   &__post {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.3;
+
+    @include mediaMx(800) {
+      line-height: 1.2;
+    }
   }
 }

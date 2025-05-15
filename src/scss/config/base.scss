@@ -50,6 +50,14 @@
   flex: 1 1 auto;
   padding-top: 202px;
 
+  @include mediaMx(1200) {
+    padding-top: 160px;
+  }
+
+  @include mediaMx(768) {
+    padding-top: 50px;
+  }
+
   [data-observ] {
     position: absolute;
     top: 0;

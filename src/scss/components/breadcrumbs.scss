@@ -13,14 +13,22 @@
     font-size: 18px;
     font-weight: 500;
 
+    @include adaptiveClamp(font-size, 18, 14, 1010, 320);
+
     @include notLast {
       margin-right: 20px;
       text-decoration: underline;
+
+      @include adaptiveClamp(margin-right, 20, 15, 1010, 320);
 
       @include pseudocell(after) {
         content: ">";
         top: 0;
         right: -25%;
+
+        @include mediaMx(900) {
+          right: -23%;
+        }
       }
     }
   }

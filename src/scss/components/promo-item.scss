@@ -17,6 +17,11 @@
     font-size: 20px;
     font-weight: 700;
     transform: translateY(-50%);
+    @include adaptiveClamp(font-size, 20, 14, 1200, 320);
+  }
+
+  @include mediaMx(768) {
+    min-width: 100%;
   }
 
   &__wrapper {
@@ -27,6 +32,8 @@
     margin-bottom: 20px;
     font-size: 32px;
     font-weight: 800;
+    @include adaptiveClamp(margin-bottom, 20, 15, 1200, 320);
+    @include adaptiveClamp(font-size, 32, 19, 1200, 320);
   }
 
   &__description {
@@ -34,12 +41,15 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
+    @include adaptiveClamp(margin-bottom, 32, 14, 1200, 320);
+    @include adaptiveClamp(font-size, 20, 14, 1200, 320);
   }
 
   &__small-title {
     margin-bottom: 16px;
     font-size: 16px;
     font-weight: 700;
+    @include adaptiveClamp(font-size, 16, 14, 1200, 320);
   }
 
   &__list, &__item {
@@ -55,9 +65,12 @@
     @include notLast {
       margin-bottom: 10px;
     }
+    @include adaptiveClamp(font-size, 16, 12, 1200, 320);
   }
 
   &__prev {
     height: 285px;
+    @include adaptiveClamp(height, 285, 238, 1200, 768);
+    @include adaptiveClamp(height, 420, 190, 767, 320);
   }
 }

@@ -1,6 +1,8 @@
 .employees-section-section {
   padding-top: 23px;
   padding-bottom: 110px;
+  @include adaptiveClamp(padding-bottom, 110, 60, 890, 320);
+
 
   &__breadcrumbs {
     margin-bottom: 23px;
@@ -10,6 +12,8 @@
     margin-bottom: 40px;
     font-weight: 800;
     font-size: 48px;
+    @include adaptiveClamp(font-size, 48, 28, 890, 320);
+    @include adaptiveClamp(margin-bottom, 40, 30, 890, 320);
   }
 
   &__list {
@@ -17,6 +21,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
+
+    @include mediaMx(650) {
+      gap: 30px 10px;
+    }
   }
 
   &__item {
@@ -24,6 +32,18 @@
 
     &:last-child {
       margin-right: auto;
+    }
+
+    @include mediaMx(1080) {
+      width: calc(100% / 3 - 20px);
+    }
+
+    @include mediaMx(650) {
+      width: calc(100% / 2 - 10px);
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }

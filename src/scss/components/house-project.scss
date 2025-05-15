@@ -1,6 +1,14 @@
 .house-project {
   width: calc(100% / 3 - 15px);
 
+  @include mediaMx(930) {
+    width: calc(100% / 2 - 10px);
+  }
+
+  @include mediaMx(630) {
+    width: 100%;
+  }
+
   &__link {
     @include anyHover {
       .btn.btn-blue {
@@ -12,6 +20,8 @@
 
   &__image {
     min-height: 263px;
+
+    @include adaptiveClamp(min-height, 420, 215, 630, 320);
   }
 
   &__content {
@@ -23,6 +33,8 @@
     margin-bottom: 15px;
     font-size: 22px;
     font-weight: 600;
+    line-height: 1.3;
+    @include adaptiveClamp(font-size, 22, 18, 390, 320);
   }
 
   &__cost {
@@ -31,5 +43,13 @@
     margin-bottom: 25px;
     font-size: 26px;
     font-weight: 800;
+    @include adaptiveClamp(margin-bottom, 25, 20, 630, 320);
+    @include adaptiveClamp(font-size, 26, 20, 390, 320);
+  }
+
+  &__btn {
+    @include mediaMx(630) {
+      height: 41px;
+    }
   }
 }

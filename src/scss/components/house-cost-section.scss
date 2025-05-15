@@ -1,16 +1,20 @@
 .house-cost-section {
   padding-bottom: 110px;
+  @include adaptiveClamp(padding-bottom, 110, 60, 1200, 320);
 
   &__title {
     margin-bottom: 40px;
     font-size: 48px;
     font-weight: 800;
+    @include adaptiveClamp(margin-bottom, 40, 20, 1200, 320);
+    @include adaptiveClamp(font-size, 48, 28, 1200, 320);
   }
 
   &__description {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
+    @include adaptiveClamp(font-size, 20, 14, 1200, 320);
 
     @include notLast {
       margin-bottom: 20px;

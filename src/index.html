@@ -16,7 +16,7 @@
     @@include('html/components/select-project.html')
     @@include('html/components/clients-comments.html')
     <div class="page__container">
-      @@include('html/components/other-services.html', { 'title': 'Другие услуги' })
+      @@include('html/components/other-services.html', { 'title': 'Другие услуги', all: false })
     </div>
     @@include('html/components/feedback.html')
     @@include('html/components/contacts.html')
@@ -28,7 +28,7 @@
 </div>
 <div class="up visible-xs"></div>
 
-@@include('html/popupExample.html')
+@@include('html/order-call.html')
 @@include('html/script.html')
 </body>
 </html>

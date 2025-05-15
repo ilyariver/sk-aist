@@ -3,6 +3,12 @@
   overflow: hidden;
   height: 100vh;
 
+  @include mediaMx(1010) {
+    overflow: visible;
+    height: auto;
+  }
+  @include adaptiveClamp(height, 550, 250, 900, 320);
+
   @include pseudocell(after) {
     bottom: 0;
     background: #ffffff;
@@ -10,6 +16,10 @@
     width: 100%;
     height: 450px;
     z-index: 2;
+
+    @include mediaMx(1010) {
+      content: none;
+    }
   }
 
   &__stop-scroll {
@@ -20,6 +30,10 @@
     width: 40%;
     height: 100%;
     z-index: 1;
+
+    @include mediaMx(1010) {
+      display: none;
+    }
   }
 
   &__instruction {
@@ -55,6 +69,11 @@
     top: -340px;
     display: flex;
     flex-direction: column;
+
+    @include mediaMx(1010) {
+      top: auto;
+      flex-direction: row;
+    }
   }
 
   &__item {
@@ -68,10 +87,13 @@
 
       .timeline-carousel__text {
         font-size: 18px;
+
+        @include adaptiveClamp(font-size, 18, 14, 900, 320);
       }
 
       .timeline-carousel__year-number {
         font-size: 75px;
+        @include adaptiveClamp(font-size, 75, 36, 900, 320);
       }
 
       .timeline-carousel__figure {
@@ -80,18 +102,36 @@
         background-color: var(--bgcolor-blue-deep);
       }
     }
+    @include mediaMx(1010) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__left {
     display: flex;
     justify-content: space-between;
     width: 100%;
+
+    @include mediaMx(1010) {
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__img-wrap {
     display: flex;
     align-items: center;
     width: 45%;
+
+    @include mediaMx(1160) {
+      width: 50%;
+    }
+
+    @include mediaMx(1010) {
+      width: 100%;
+    }
   }
   
   &__img {
@@ -99,6 +139,16 @@
     height: 205px;
     object-fit: cover;
     transition: width $transition300;
+
+    @include adaptiveClamp(width, 350, 280, 1160, 890);
+    @include adaptiveClamp(height, 205, 165, 1160, 890);
+    @include mediaMx(1010) {
+      height: 170px;
+    }
+    @include mediaMx(900) {
+      width: 100%;
+    }
+    @include adaptiveClamp(height, 460, 160, 900, 320);
   }
 
   &__year {
@@ -107,12 +157,26 @@
     align-items: center;
     width: 60%;
     text-align: center;
+
+    @include mediaMx(1160) {
+      width: 50%;
+    }
+
+    @include mediaMx(1010) {
+      justify-content: center;
+      width: 100%;
+    }
   }
 
   &__year-number {
     margin-bottom: 15px;
     font-size: 50px;
     transition: font-size $transition300;
+
+    @include mediaMx(1010) {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
   }
 
   &__figure {
@@ -130,6 +194,10 @@
       background-color: var(--bgcolor-blue-deep);
       transform: translateX(-50%);
     }
+
+    @include mediaMx(1010) {
+      display: none;
+    }
   }
 
   &__text {
@@ -138,5 +206,10 @@
     font-size: 14px;
     line-height: 1.3;
     transition: font-size $transition300;
+
+    @include mediaMx(1010) {
+      width: 100%;
+      text-align: center;
+    }
   }
 }

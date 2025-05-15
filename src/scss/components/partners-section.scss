@@ -1,10 +1,13 @@
 .partners-section {
   padding-bottom: 110px;
+  @include adaptiveClamp(padding-bottom, 110, 60, 1010, 320);
 
   &__title {
     margin-bottom: 44px;
     font-weight: 800;
     font-size: 48px;
+    @include adaptiveClamp(font-size, 44, 28, 1010, 320);
+    @include adaptiveClamp(margin-bottom, 44, 37, 1010, 320);
   }
 
   &__list {
@@ -13,6 +16,14 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 40px;
+
+    @include mediaMx(1060) {
+      gap: 40px 0;
+    }
+
+    @include mediaMx(400) {
+      gap: 30px 0;
+    }
   }
 
   &__item {
@@ -25,11 +36,23 @@
     @include anyHover {
       opacity: 1;
     }
+
+    @include mediaMx(1060) {
+      width: calc(100% / 3 - 25px);
+    }
+
+    @include mediaMx(400) {
+      width: calc(100% / 3 - 15px);
+    }
   }
 
   &__img {
     width: 60%;
     object-fit: cover;
+
+    @include mediaMx(1060) {
+      width: 90%;
+    }
 
     &.domrf {
       width: 50px;

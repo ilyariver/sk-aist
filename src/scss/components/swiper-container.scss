@@ -69,7 +69,7 @@
 
   @include mediaMx(767) {
     height: auto;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     align-items: stretch;
   }
 
@@ -98,7 +98,7 @@
   height: auto;
   flex-shrink: 1;
 
-  @include mediaMx(mediaMx(767)) {
+  @include mediaMx(767) {
     width: 100%;
     flex-shrink: 0;
   }
@@ -112,7 +112,7 @@
     transform: scale(0.615) translateX(0);
     transition: transform $transition300;
 
-    @include mediaMx(mediaMx(767)) {
+    @include mediaMx(767) {
       height: 100%;
       width: 100%;
     }
@@ -125,7 +125,7 @@
       transform: scale(0.875) translateX(0);
       opacity: .6;
 
-      @include mediaMx(mediaMx(767)) {
+      @include mediaMx(767) {
         transform: scale(1) translateX(0);
         opacity: 1;
       }
@@ -208,7 +208,11 @@
   left: 0;
   top: 27px;
   width: 100%;
-  z-index: 1000;
+  z-index: 1;
+
+  @include mediaMx(767) {
+    display: none;
+  }
 }
 
 .cards-slide .swiper-button-prev,

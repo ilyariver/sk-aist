@@ -1,0 +1,33 @@
+<div class="popup" data-popup="orderCall" data-close-overlay>
+    <div class="popup__wrapper" data-close-overlay>
+        <div class="popup__content">
+            <button class="popup__close button-close" type="button">x</button>
+            <div class="mc_title">Заказать звонок</div>
+            <div class="mc_form">
+                <form method="post" action="#">
+                    <div class="form_row">
+                        <div class="fr_caption">Имя</div>
+                        <input type="text" name="f_Name" value="" placeholder="Ваше Имя" required />
+                    </div>
+                    <div class="form_row">
+                        <div class="fr_caption">Телефон</div>
+                        <input type="tel" name="f_Phone" value="" placeholder="Номер телефона" required />
+                    </div>
+                    <div class="form_row">
+                        <label class="form_label light" for="f2_agreement">
+                            <input id="f2_agreement" type="checkbox" name="ua" required>
+                            <span>Я согласен на&nbsp;<a href="#" target="_blank">обработку персональных данных</a></span>
+                        </label>
+                    </div>
+                    <div class="form_row">
+                        <!-- div class="submit_preloader">&nbsp;</div -->
+                        <input type="submit" value="Заказать звонок" class="btn" />
+                    </div>
+                    <!-- input type="hidden" name="f_formType" value="Страница «Премиальные шведские столы от производителя». Всплывающая форма «Подобрать шведский стол»" />
+                    <input type="hidden" name="f_formTypeId" value="1" />
+                    <input type="hidden" name="f_formURL" value="<?=$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']?>" / -->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

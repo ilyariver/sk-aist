@@ -1,16 +1,24 @@
 .office-images-section {
   padding-bottom: 110px;
+  @include adaptiveClamp(padding-bottom, 110, 60, 1010, 320);
 
   &__title {
     margin-bottom: 44px;
     font-weight: 800;
     font-size: 48px;
+    @include adaptiveClamp(font-size, 48, 28, 1010, 320);
+    @include adaptiveClamp(margin-bottom, 44, 30, 1010, 320);
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+
+    @include mediaMx(600) {
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+    }
   }
 
   &__item {
@@ -20,6 +28,15 @@
     width: calc(100% / 3 - 20px);
     height: 251px;
     background-color: #A9A9A9;
+    @include adaptiveClamp(height, 251, 200, 1010, 600);
+    @include adaptiveClamp(height, 350, 251, 600, 320);
+    @include mediaMx(830) {
+      width: calc(100% / 2 - 20px);
+    }
+
+    @include mediaMx(600) {
+      min-width: 100%;
+    }
 
     span {
       color: #fff;

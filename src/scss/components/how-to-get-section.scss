@@ -1,9 +1,12 @@
 .how-to-get-section {
   padding-bottom: 110px;
+  @include adaptiveClamp(padding-bottom, 110, 60, 1010, 320);
 
   &__title {
     margin-bottom: 44px;
     font-weight: 800;
     font-size: 48px;
+    @include adaptiveClamp(font-size, 44, 28, 1010, 320);
+    @include adaptiveClamp(margin-bottom, 44, 30, 1010, 320);
   }
 }

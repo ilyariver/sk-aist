@@ -269,6 +269,13 @@ header {
 		}
 	}
 
+	@include mediaMx(767) {
+
+		&:last-child {
+			display: none;
+		}
+	}
+
 }
 
 .htcp_wa {
@@ -329,7 +336,7 @@ header {
 
 .active .mm_trigger,
 .search .mm_trigger {
-	background: url('../img/mm_close.svg') center no-repeat;
+	background: url('../images/mm_close.svg') center no-repeat;
 	background-size: contain;
 
 	span {
@@ -560,8 +567,9 @@ header {
 	.hb_link {
 		height: 100%;
 
-		& > a {
+		& > button {
 			padding: 0 64.5px;
+			height: 100%;
 			background-color: var(--bgcolor-red);
 
 			@include mediaMx(1199) {
@@ -575,6 +583,7 @@ header {
 
 			&:hover {
 				background-color: var(--bgcolor-red-hover);
+				color: #fff;
 			}
 
 		}

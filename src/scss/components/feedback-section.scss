@@ -1,9 +1,11 @@
 .contacts-page-section {
   padding-bottom: 110px;
+  @include adaptiveClamp(padding-bottom, 110, 60, 1010, 320);
 }
 
 .aist_block {
   margin-bottom: 110px;
+  @include adaptiveClamp(margin-bottom, 110, 60, 1010, 320);
 }
 .aist_4 {
   padding: 70px 0;
