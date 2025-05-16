@@ -106,17 +106,19 @@ function initSwiper(direction = 'vertical') {
     mousewheel: {
       sensitivity: 1,
     },
+    allowTouchMove: true,
     speed: 300,
     centeredSlides: true,
     breakpoints: {
       320: {
         slidesPerView: 1,
         spaceBetween: 40,
+        direction: 'horizontal'
       },
       900: {
         slidesPerView: 3,
         spaceBetween: 15,
-        autoHeight: true,
+        direction: 'horizontal'
       },
       1010: {
         //slidesPerView: 3,
@@ -130,7 +132,6 @@ let direction = 'vertical';
 let swiper = initSwiper(direction);
 
 function changeDirection() {
-  console.log('resize');
   const width = window.innerWidth;
   if (width < 1010) {
     direction = 'horizontal';
@@ -141,9 +142,59 @@ function changeDirection() {
   let slideIndex = swiper.activeIndex;
   swiper.destroy(true, true);
   swiper = initSwiper(direction);
-  console.log(swiper);
-  swiper.slideTo(slideIndex,300);
+  swiper.slideTo(slideIndex,0);
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const swiperPromo = new Swiper('.swiper-promo-container', {
+    slidesPerView: 1,
+    enabled: window.innerWidth < 768,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 40,
+      },
+      768: {
+        //spaceBetween: 16,
+      }
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768 && swiperPromo.enabled) {
+      swiperPromo.disable();
+    } else if (window.innerWidth < 768 && !swiperPromo.enabled) {
+      swiperPromo.enable();
+    }
+  });
+
+  const swiper2 = new Swiper('.swiper-promotions-container', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+
+
+      },
+      768: {
+
+      }
+    }
+  });
+})
 
 window.addEventListener('resize', changeDirection);
 window.addEventListener('DOMContentLoaded', changeDirection);
@@ -201,24 +252,30 @@ window.addEventListener('DOMContentLoaded', moveBlock);
 // При изменении размера окна
 window.addEventListener('resize', moveBlock);
 
-// move image promo block
+// move images promo block
 function movePromoImage() {
-  const promoImg = document.getElementById('promo-img');
-  const promoTitle = document.getElementById('promo-title');
-  const promoRight = document.querySelector('.promotions-section__right');
-  const promoLeft = document.querySelector('.promotions-section__left');
-
   const screenWidth = window.innerWidth;
 
-  if (screenWidth < 768) {
-    // Переместить после заголовка, если ещё не там
-    if (!promoTitle?.nextElementSibling || promoTitle?.nextElementSibling.id !== 'promo-img') {
-      promoLeft?.insertBefore(promoImg, promoTitle?.nextElementSibling);
+  const promoBlocks = document.querySelectorAll('.js-swiper-slide');
+
+  promoBlocks.forEach((block) => {
+    const promoImg = block.querySelector('.js-promo-img');
+    const promoTitle = block.querySelector('.js-promo-title');
+    const promoLeft = block.querySelector('.promotions-section__left');
+    const promoRight = block.querySelector('.promotions-section__right');
+
+    if (!promoImg || !promoTitle) return;
+
+    if (screenWidth < 768) {
+      // Переместить после заголовка, если ещё не там
+      if (promoTitle.nextElementSibling !== promoImg) {
+        promoLeft?.insertBefore(promoImg, promoTitle.nextElementSibling);
+      }
+    } else {
+      // Вернуть обратно в правую колонку, если он не там
+      promoLeft?.after(promoImg);
     }
-  } else {
-    // Вернуть обратно, если promo-img не в правой колонке
-    promoLeft?.after(promoImg);
-  }
+  });
 }
 
 window.addEventListener('DOMContentLoaded', movePromoImage);
@@ -248,3 +305,45 @@ burger?.addEventListener('click', (e) => {
   }
 })
 
+// обработчик кнопки "up"
+const upBtn = document.querySelector('.up');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    upBtn?.classList.add('show');
+    if (!upBtn) return;
+    setTimeout(() => upBtn.style.display = 'block', 500);
+  } else {
+    upBtn?.classList.remove('show');
+    if (!upBtn) return;
+    setTimeout(() => upBtn.style.display = 'none', 500);
+
+  }
+})
+upBtn?.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+})
+
+// анимация пальца
+// Можно переиспользовать для нескольких блоков
+const targets = document.querySelectorAll('.animated-target');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const finger = entry.target.querySelector('.finger');
+      finger.classList.add('animate');
+
+      // Убираем анимацию через 5 секунд
+      setTimeout(() => {
+        finger.classList.remove('animate');
+      }, 5000);
+    }
+  });
+}, {
+  threshold: 0.5 // Когда видно 50% блока
+});
+
+targets.forEach(target => observer.observe(target));

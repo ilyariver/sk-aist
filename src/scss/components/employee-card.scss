@@ -1,7 +1,7 @@
 .employee-card {
   &__img {
     width: 100%;
-    min-height: 358px;
+    height: 458px;
     object-fit: cover;
 
     &--empty {
@@ -11,7 +11,7 @@
       background-color: #A9A9A9;
     }
 
-    @include adaptiveClamp(min-height, 358, 195, 890, 320);
+    @include adaptiveClamp(height, 458, 195, 890, 320);
   }
 
   &__empty-text {

@@ -48,7 +48,7 @@
 .page {
   position: relative;
   flex: 1 1 auto;
-  padding-top: 202px;
+  padding-top: 200px;
 
   @include mediaMx(1200) {
     padding-top: 160px;

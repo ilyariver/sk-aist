@@ -45,6 +45,10 @@
     transform: translateY(rem(-200));
     opacity: 0;
     transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+    @include mediaMx(900) {
+      padding: rem(60) rem(20) rem(30);
+    }
   }
 
   // .popup__close

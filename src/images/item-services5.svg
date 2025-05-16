@@ -1,16 +1,16 @@
-<svg width="114" height="71" viewBox="0 0 114 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M68 21L41.3256 37.4498" stroke="black" stroke-width="2"/>
-    <path d="M10.9085 39.6099V69.3048H53.9661V41.0947M53.9661 41.0947L56.9356 44.0642L61.3898 39.6099L31.6949 9.91504L2 39.6099L6.45423 44.0642L31.6949 18.8235L53.9661 41.0947Z" stroke="black" stroke-width="2"/>
-    <path d="M45.0575 23.2777V17.3387H53.966V32.1862" stroke="black" stroke-width="2"/>
-    <path d="M24.2711 69.3049V47.0337H40.6033V69.3049" stroke="black" stroke-width="2"/>
-    <rect x="68" y="1" width="44.6216" height="32.9792" fill="#D2553C" stroke="black" stroke-width="2"/>
-    <path d="M67 12H111.732" stroke="black" stroke-width="2"/>
-    <path d="M68 23H112.732" stroke="black" stroke-width="2"/>
-    <path d="M84 2V13" stroke="black" stroke-width="2"/>
-    <path d="M103 1V12" stroke="black" stroke-width="2"/>
-    <path d="M76 13V24" stroke="black" stroke-width="2"/>
-    <path d="M95 12V23" stroke="black" stroke-width="2"/>
-    <path d="M107 23V34" stroke="black" stroke-width="2"/>
-    <path d="M89 23V34" stroke="black" stroke-width="2"/>
-    <path d="M72 23V34" stroke="black" stroke-width="2"/>
+<svg width="123" height="101" viewBox="0 0 123 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.9085 52.6099V82.3048H53.9661V54.0947M53.9661 54.0947L56.9356 57.0642L61.3898 52.6099L31.6949 22.915L2 52.6099L6.45423 57.0642L31.6949 31.8235L53.9661 54.0947Z" stroke="black" stroke-width="2"/>
+<path d="M45.0575 36.2777V30.3387H53.966V45.1862" stroke="black" stroke-width="2"/>
+<path d="M24.2711 82.3049V60.0337H40.6033V82.3049" stroke="black" stroke-width="2"/>
+<rect x="68" y="14" width="44.6216" height="32.9792" fill="#D2553C" stroke="black" stroke-width="2"/>
+<path d="M67 25H111.732" stroke="black" stroke-width="2"/>
+<path d="M68 36H112.732" stroke="black" stroke-width="2"/>
+<path d="M84 15V26" stroke="black" stroke-width="2"/>
+<path d="M103 14V25" stroke="black" stroke-width="2"/>
+<path d="M76 26V37" stroke="black" stroke-width="2"/>
+<path d="M95 25V36" stroke="black" stroke-width="2"/>
+<path d="M107 36V47" stroke="black" stroke-width="2"/>
+<path d="M89 36V47" stroke="black" stroke-width="2"/>
+<path d="M72 36V47" stroke="black" stroke-width="2"/>
+<path d="M68 34L41.3256 50.4498" stroke="black" stroke-width="2"/>
 </svg>

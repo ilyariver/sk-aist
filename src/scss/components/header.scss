@@ -4,7 +4,7 @@ header {
 	left: 0;
 	width: 100%;
 	height: 202px;
-	background: var(--color-font-white);
+	background: transparent;
 	z-index: 2;
 
 	&.shadow {
@@ -13,6 +13,7 @@ header {
 	}
 
 	.h_top {
+		background-color: var(--color-font-white);
 
 		@include mediaMx(767) {
 

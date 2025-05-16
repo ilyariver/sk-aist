@@ -5,9 +5,29 @@
   @include adaptiveClamp(margin-bottom, 110, 60, 1200, 320);
   @include adaptiveClamp(padding-top, 71, 30, 1200, 320);
 
-  &__container {
+  .swiper-promotions-container {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .swiper-wrapper {
     display: flex;
-    align-items: flex-start;
+    margin-bottom: 78px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+  }
+
+  .swiper-pagination {
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  &__swiper-directs {
+    display: flex;
     justify-content: space-between;
   }
 

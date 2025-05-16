@@ -199,7 +199,7 @@
 
 }
 
-.cards-slide .swiper-pagination {
+.swiper-pagination {
   justify-content: center;
 }
 
@@ -246,7 +246,7 @@
   right: 0;
 }
 
-.cards-slide .swiper-pagination {
+.swiper-pagination {
   position: static;
   display: flex;
   align-items: center;
@@ -257,7 +257,7 @@
   gap: 9px;
 }
 
-.cards-slide .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   width: 88px;
   height: 100%;
   display: block;
@@ -267,6 +267,40 @@
   margin: 0;
 }
 
-.cards-slide .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
   opacity: 1;
+}
+
+.sn_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 11px;
+
+  @include mediaMx(767) {
+    display: none;
+  }
+
+  & > div {
+    width: 47px;
+    height: 47px;
+    background: url('../images/swiper_btn_next.svg') center no-repeat;
+    background-size: 47px auto;
+    cursor: pointer;
+  }
+
+  & > div:hover {
+    background-image: url('../images/swiper_btn_next_hover.svg');
+  }
+
+  .swiper-button-prev {
+    transform: rotate(180deg);
+  }
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: .35;
+  cursor: auto;
+  pointer-events: none;
 }

@@ -20,7 +20,7 @@
   &__item {
     display: flex;
     align-items: center;
-    padding-left: 65px;
+    padding-left: 46px;
     width: calc(100% / 2 - 11px);
     height: 100px;
     background-color: var(--bgcolor-blue-light);
@@ -33,10 +33,10 @@
   }
 
   &__icon {
-    margin-right: 40px;
+    margin-right: 24px;
     display: flex;
     justify-content: flex-end;
-    width: 110px;
+    //width: 110px;
     @include adaptiveClamp(margin-right, 40, 0, 1200, 320);
     @include mediaMx(880) {
       justify-content: center;

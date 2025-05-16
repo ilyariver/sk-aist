@@ -28,15 +28,46 @@
   }
 
   &__promos-items {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    //height: 450px;
+    padding-top: 20px;
+    width: 100%;
+    overflow-x: hidden;
+
+    .swiper-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 60px 32px;
+
+      @include mediaMx(768) {
+        flex-wrap: nowrap;
+        margin-bottom: 38px;
+        gap: normal;
+      }
+    }
+
+    .swiper-slide {
+      @include mediaMx(768) {
+        min-width: 100%!important;
+      }
+    }
 
     @include mediaMx(768) {
-      overflow-x: scroll;
+      overflow: hidden;
       padding-top: 20px;
       gap: 20px;
     }
 
+  }
+
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    display: none;
+    width: 40%!important;
+    @include adaptiveClamp(height, 5, 3, 768, 328);
+
+    @include mediaMx(768) {
+      display: block;
+    }
   }
 }

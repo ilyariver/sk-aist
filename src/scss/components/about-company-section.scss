@@ -1,7 +1,13 @@
 .about-company-section {
   padding-top: 23px;
   padding-bottom: 110px;
-  @include adaptiveClamp(padding-bottom, 110, 60, 1010, 320);
+  //@include adaptiveClamp(padding-bottom, 110, 0, 1010, 320);
+  @include mediaMx(1010) {
+    padding-bottom: 0;
+  }
+  @include mediaMx(900) {
+    padding-bottom: 60px;
+  }
 
   &__breadcrumbs {
     margin-bottom: 23px;

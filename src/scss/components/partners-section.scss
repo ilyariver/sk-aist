@@ -39,6 +39,7 @@
 
     @include mediaMx(1060) {
       width: calc(100% / 3 - 25px);
+      opacity: 1;
     }
 
     @include mediaMx(400) {
