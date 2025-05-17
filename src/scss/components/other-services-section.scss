@@ -26,10 +26,11 @@
     background-color: var(--bgcolor-blue-light);
 
     @include mediaMx(880) {
+      padding-left: 25px;
       width: 100%;
     }
     @include adaptiveClamp(height, 100, 61, 1200, 320);
-    @include adaptiveClamp(padding-left, 65, 0, 1200, 320);
+    //@include adaptiveClamp(padding-left, 65, 0, 1200, 320);
   }
 
   &__icon {
@@ -39,7 +40,7 @@
     //width: 110px;
     @include adaptiveClamp(margin-right, 40, 0, 1200, 320);
     @include mediaMx(880) {
-      justify-content: center;
+      margin-right: 20px;
     }
 
     img {
