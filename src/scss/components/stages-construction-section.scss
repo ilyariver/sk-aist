@@ -40,7 +40,7 @@
         }
 
         .stages-construction-section__arrow-btn {
-          transform: rotate(-180deg);
+          transform: rotate(180deg);
         }
       }
     }
@@ -61,6 +61,13 @@
       min-width: 60px;
       min-height: 60px;
     }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
   }
 
   &__description {
@@ -91,6 +98,8 @@
 
     @include mediaMx(889) {
       display: block;
+      transform: rotate(0);
+      transition: transform 0.3s ease;
     }
   }
 }

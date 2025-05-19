@@ -8,7 +8,8 @@
  */
 // import MousePRLX from './libs/parallaxMouse'
 // import AOS from 'aos'
-import Swiper, { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper';
+import Swiper from 'swiper';
+import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules';
 
 import BaseHelpers from './helpers/BaseHelpers.js';
 import PopupManager from './modules/PopupManager';
@@ -66,13 +67,7 @@ Swiper.use([Navigation]);
 Swiper.use([Pagination]);
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.swiper-container', {
-    //mousewheel: true,
-    slidesPerView: 'auto',
-    //spaceBetween: 30,
-    centeredSlides: true,
-    //centeredSlidesBounds: true,
     loop: true,
-    //loopAdditionalSlides: 2,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -89,6 +84,8 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       768: {
         //spaceBetween: 16,
+        slidesPerView: 'auto',
+        centeredSlides: true,
       }
     }
   });
@@ -104,11 +101,11 @@ function initSwiper(direction = 'vertical') {
     slidesPerView: 4,
     slideActiveClass: 'active',
     mousewheel: {
-      sensitivity: 1,
+      sensitivity: 5,
     },
     allowTouchMove: true,
-    speed: 300,
-    centeredSlides: true,
+    speed: 500,
+    centeredSlides: false,
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -139,10 +136,10 @@ function changeDirection() {
     direction = 'vertical';
   }
 
-  let slideIndex = swiper.activeIndex;
-  swiper.destroy(true, true);
+  let slideIndex = swiper?.activeIndex;
+  swiper?.destroy(true, true);
   swiper = initSwiper(direction);
-  swiper.slideTo(slideIndex,0);
+  swiper?.slideTo(slideIndex,0);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -160,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 40,
       },
       768: {
-        //spaceBetween: 16,
+        spaceBetween: 0,
       }
     }
   });

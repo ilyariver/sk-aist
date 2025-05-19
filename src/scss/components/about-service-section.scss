@@ -1,6 +1,10 @@
 .about-service-section {
   padding-bottom: 110px;
 
+  @include mediaMx(768) {
+    padding-bottom: 60px;
+  }
+
   &__container {
   }
 
@@ -64,7 +68,6 @@
   .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     display: none;
     width: 40%!important;
-    @include adaptiveClamp(height, 5, 3, 768, 328);
 
     @include mediaMx(768) {
       display: block;

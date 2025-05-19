@@ -46,6 +46,7 @@
     img {
       object-fit: contain;
       @include adaptiveClamp(height, 80, 40, 1200, 320);
+      @include adaptiveClamp(width, 101, 40, 1200, 320);
     }
   }
 
@@ -60,5 +61,16 @@
     display: flex;
     justify-content: center;
     margin-top: 40px;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include mediaMx(767) {
+        width: 100%;
+        height: 59px;
+      }
+    }
   }
 }

@@ -70,7 +70,7 @@
 
   &__list {
     position: absolute;
-    top: -340px;
+    top: 5px;
     display: flex;
     flex-direction: column;
 
@@ -91,15 +91,20 @@
 
       .timeline-carousel__text {
         @include mediaMn(1010) {
-          font-size: 18px;
+          transform: scale(1.5);
+          padding: 40px;
         }
 
         //@include adaptiveClamp(font-size, 18, 14, 900, 320);
       }
 
+      .timeline-carousel__year {
+        padding-right: 0;
+      }
+
       .timeline-carousel__year-number {
         @include mediaMn(1010) {
-          font-size: 75px;
+          transform: scale(1.5);
         }
         //@include adaptiveClamp(font-size, 75, 36, 900, 320);
       }
@@ -165,6 +170,7 @@
     align-items: center;
     width: 60%;
     text-align: center;
+    padding-right: 20px;
 
     @include mediaMx(1160) {
       width: 50%;
@@ -179,7 +185,7 @@
   &__year-number {
     margin-bottom: 15px;
     font-size: 50px;
-    transition: font-size $transition300;
+    transition: transform $transition300;
 
     @include mediaMx(1010) {
       margin-top: 10px;
@@ -213,7 +219,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 1.3;
-    transition: font-size $transition300;
+    transition: transform $transition300;
 
     @include mediaMx(1010) {
       width: 100%;
